@@ -37,6 +37,9 @@ android {
             path 'jni/Android.mk'
         }
     }
+    
+    // 现代NDK配置
+    ndkVersion "25.1.8937393"
 }
 
 dependencies {
