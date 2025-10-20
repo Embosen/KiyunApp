@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.cchen.test1.view.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="toggle">
+
+    <CheckBox
+        android:id="@+id/txt_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:text="on_off"
+        android:textSize="@dimen/light_text_size"
+        android:drawablePadding="@dimen/light_padding"
+        android:textOff="关"
+        android:textOn="开" />
+</com.example.cchen.test1.view.CheckableRelativeLayout>

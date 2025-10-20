@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="bar_chart_size">24</integer>
+    <integer name="tick_label_margin">24</integer>
+    <integer name="dial_tick_label_size">14</integer>
+</resources>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Test1</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="kiyun">凯云科技</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="speed">车速</string>
+    <string name="distance">行驶距离 %1$.2f 千米</string>
+    <string name="fuel_consume">燃油消耗  %1$.2f 升</string>
+    <string name="hex">十六进制</string>
+    <string name="bin">二进制</string>
+    <string name="decimal">十进制</string>
+    <string name="mpa" >%1$.2f MPa</string>
+    <string name="fuel_height" >%1$.2f %%</string>
+    <string name="tcot" >%1$.2f ℃</string>
+</resources>

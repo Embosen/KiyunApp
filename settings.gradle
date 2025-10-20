@@ -1,0 +1,4 @@
+include ':app', ':usbSerialForAndroid', ':usbSerialExamples'
+//include ':kaiyunerp'
+include ':xCLCharts'
+include ':xCLChartsdemo'

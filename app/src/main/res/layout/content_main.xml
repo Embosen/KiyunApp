@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/a"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/control_content"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_resume"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="使用教程"
+            android:textColor="@color/black"
+            android:textSize="@dimen/light_text_size" />
+
+        <TextView
+            android:id="@+id/txt_data"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="原始数据"
+            android:textColor="@color/black"
+            android:textSize="@dimen/light_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/control_content"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_weight="55"
+                tools:context=".activity.MainActivity"
+                tools:showIn="@layout/activity_main">
+
+                <View
+                    android:id="@+id/center_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/center_view">
+
+                    <TextView
+                        android:id="@+id/txt_distance"
+                        android:layout_width="248dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:text="@string/distance"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/light_text_size" />
+
+                    <com.example.cchen.test1.view.RpmView
+                        android:id="@+id/chart_rpm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/txt_distance" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/center_view">
+
+                    <TextView
+                        android:id="@+id/txt_fuel_consume"
+                        android:layout_width="248dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:text="@string/fuel_consume"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/light_text_size" />
+
+
+                    <com.example.cchen.test1.view.SpeedView
+                        android:id="@+id/chart_speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/txt_fuel_consume"
+                        android:layout_alignParentTop="true" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <com.example.cchen.test1.view.KyChartView
+                android:id="@+id/gear_oil_pressure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15" />
+
+            <com.example.cchen.test1.view.KyChartView
+                android:id="@+id/fuel_height"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15" />
+
+            <com.example.cchen.test1.view.KyChartView
+                android:id="@+id/torque_converter_oil_temperature"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15" />
+
+            <com.example.cchen.test1.view.BarChart12View
+                android:id="@+id/bar_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="45"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/grid_lights"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/light_list_margin"
+                android:layout_marginRight="@dimen/light_list_margin"
+                android:layout_weight="50"
+                android:tag="light" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/grid_toggles"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/light_list_margin"
+                android:layout_marginRight="@dimen/light_list_margin"
+                android:layout_weight="50"
+                android:tag="toggle" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
